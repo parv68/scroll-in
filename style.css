@@ -1,0 +1,59 @@
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color:  #e6c50d;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    width: 60%;
+    background: #ffffff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 20px;
+}
+p{
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+img{
+    height: 200px;
+    width: 300px;object-fit: cover;
+
+}
+
+.align-right{
+    float: right;
+    margin-left: 20px;
+}
+.align-left{
+    float: left;
+    margin-right: 20px;
+}
+.slide-in{
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.align-left.slide-in{
+    transform: translateX(-30px) scale(0.95);
+}
+
+.align-right.slide-in{
+    transform: translateX(30px) scale(0.95);
+}
+
+.slide-in.active{
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+}
+
